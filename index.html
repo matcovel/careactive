@@ -17,7 +17,7 @@ a{color:var(--purple)}a:hover{color:var(--magenta)}
 .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
 h1,h2,h3{margin:0}
 h2{font-size:32px;font-weight:800;letter-spacing:-.01em;margin-bottom:24px}
-.tag{display:inline-block;background:#FFE58A;color:#4A3800;font:700 11px/1.2 ui-monospace,Menlo,monospace;padding:3px 7px;border-radius:4px;vertical-align:middle;margin:0 6px;white-space:nowrap;letter-spacing:.02em}
+.tag{display:inline-block;background:#FFE58A;color:#4A3800;font:700 11px/1.2 ui-monospace,Menlo,monospace;padding:3px 7px;border-radius:4px;vertical-align:middle;margin:2px 6px;white-space:normal;letter-spacing:.02em}
 body.noann .tag{display:none}
 .btn{font:inherit;font-weight:700;font-size:15px;border-radius:999px;padding:14px 26px;cursor:pointer;text-decoration:none;display:inline-block;transition:background-color .2s,transform .2s,box-shadow .2s;border:2px solid var(--purple)}
 .btn-primary{background:var(--purple);color:#fff}
@@ -178,6 +178,33 @@ footer{background:var(--ink);color:#CFC6DD;font-size:13px;padding:28px 0}
 .modal label{font-size:13px;font-weight:700;color:#2E2840}
 .modal input{display:block;width:100%;margin-top:4px;font:inherit;font-weight:400;padding:11px 12px;border:1px solid #CFC6DD;border-radius:8px}
 .lightbox .modal{max-width:900px}
+/* v2 */
+.awards{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:center;padding:0 0 40px}
+.award{margin:0;display:flex;align-items:center;gap:10px}
+.award-logo{width:56px;height:56px;border-radius:50%;border:1px dashed #BBAFCC;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--muted)}
+.award figcaption{font-size:12px;font-weight:600;color:var(--ink);line-height:1.3}
+.video-sec{padding:8px 0 56px}
+.video-sec h2{margin-bottom:16px}
+.apps-lbl{margin:22px 0 10px !important;font-size:13px !important;font-weight:800;letter-spacing:.1em;color:var(--purple) !important}
+.apps{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-block;border:1.5px solid var(--purple);color:var(--purple);border-radius:999px;padding:8px 16px;font-size:14px;font-weight:700;text-decoration:none;transition:background-color .2s,color .2s}
+.chip:hover{background:var(--purple);color:#fff}
+.card p.how{margin-top:12px;font-size:14px;color:var(--muted)}
+.science .card{background:#2C2142;border-color:#3A2D55}
+.science .card:hover{background:#352850}
+.science .n{margin:0 0 10px;font-size:12px;font-weight:800;letter-spacing:.1em;color:#F2A7C9}
+.science h3{color:#fff}
+.science .card p.sx{color:#D9D2E6;font-size:14px}
+.science .lk{display:inline-block;margin-top:14px;color:#F2A7C9;font-weight:700;font-size:14px;text-decoration:none}
+.science .lk:hover{color:#fff}
+.formulation{display:flex;flex-wrap:wrap;gap:40px;align-items:center}
+.f-text{flex:1 1 520px;min-width:0}
+.f-text>p{font-size:16px;color:var(--text);margin:0 0 18px}
+.f-data{display:flex;flex-wrap:wrap;gap:16px;margin:0 0 12px}
+.f-data div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;min-width:140px}
+.f-data dt{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.06em}
+.f-data dd{margin:4px 0 0;font-size:26px;font-weight:800;color:var(--purple)}
+.f-img{flex:1 1 340px;min-width:0;aspect-ratio:4/3;border-radius:16px;background:#E6DCF0;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}
 @media (max-width:700px){
   .banner{min-height:340px}.banner h1{font-size:56px}.banner h1 .desc{font-size:22px}
   h2{font-size:26px}
@@ -236,7 +263,7 @@ footer{background:var(--ink);color:#CFC6DD;font-size:13px;padding:28px 0}
 <button class="btn btn-primary" type="button" data-open="sample">Request a sample</button>
 <a class="btn btn-ghost" href="#documents">Technical documents</a>
 </div>
-<p style="margin:0"><span class="tag">CTA principal → POP-UP muestra</span><span class="tag">HOVER morado → magenta</span></p>
+<p style="margin:0"><span class="tag">CTA → POP-UP con el FORMULARIO HUBSPOT "Talk to an expert" (activo precargado)</span></p>
 </div>
 <figure class="hero-img">
 <img src="https://www.weareprovital.com/store/images/portada-affipore.jpg.webp" alt="Affipore™ cosmetic active ingredient by Provital, green leaf visual" loading="lazy">
@@ -244,20 +271,35 @@ footer{background:var(--ink);color:#CFC6DD;font-size:13px;padding:28px 0}
 </figure>
 </div>
 
-<div class="seals" aria-label="Certifications">
+<div class="seals" aria-label="Certifications and awards">
 <span class="seal" tabindex="0">Preservative-free<span class="tip" role="tooltip">Formulated without preservatives.</span></span>
 <span class="seal" tabindex="0">Paraben-free<span class="tip" role="tooltip">Contains no parabens.</span></span>
 <span class="seal" tabindex="0">[COSMOS]<span class="tip" role="tooltip">Pending validation: COSMOS certification.</span></span>
 <span class="seal" tabindex="0">[X % natural origin]<span class="tip" role="tooltip">Natural origin index according to ISO 16128.</span></span>
-<span class="seal" tabindex="0">[Vegan]<span class="tip" role="tooltip">Pending validation: no animal-derived ingredients.</span></span>
 <span class="seal" tabindex="0">[IECIC]<span class="tip" role="tooltip">Pending validation: listed in the China IECIC inventory.</span></span>
 <span class="tag">SELLOS · tooltip en hover</span>
 </div>
+<div class="awards" aria-label="Awards">
+<figure class="award"><div class="award-logo" role="img" aria-label="[Award name] logo">[Logo]</div><figcaption>[Award name]<br>[Year]</figcaption></figure>
+<figure class="award"><div class="award-logo" role="img" aria-label="[Award name] logo">[Logo]</div><figcaption>[Award name]<br>[Year]</figcaption></figure>
+<span class="tag">PREMIOS · imagen del logo + alt + nombre y año en texto (solo si tiene)</span>
 </div>
+</div>
+
+<section class="video-sec" aria-labelledby="video-h">
+<div class="wrap">
+<h2 id="video-h">Discover Affipore™: [concepto del vídeo] <span class="tag">H2 · VÍDEO de branding justo tras la presentación · Marca + concepto, no siempre beneficio</span></h2>
+<button class="vid" type="button" aria-label="Play video (placeholder)">
+<span class="play"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#5B2C83"/></svg></span>
+<span class="cap">[Vídeo de branding del activo · el reproductor carga al hacer clic]</span>
+</button>
+<p class="transcript">[Leyenda de 1 o 2 líneas que sitúe el activo en su contexto.] <a href="#top">Read the video transcript</a> <span class="tag">LEYENDA + TRANSCRIPCIÓN · VideoObject · solo si existe</span></p>
+</div>
+</section>
 
 <nav class="anchors" aria-label="On this page">
 <div class="wrap">
-<a href="#overview">Overview</a><a href="#efficacy">Efficacy</a><a href="#mechanism">Mechanism</a><a href="#origin">Origin</a><a href="#applications">Applications</a><a href="#documents">Documents</a><a href="#faqs">FAQs</a>
+<a href="#overview">Overview</a><a href="#benefits">Benefits</a><a href="#efficacy">Efficacy</a><a href="#science">Science</a><a href="#formulation">Formulation</a><a href="#documents">Documents</a><a href="#faqs">FAQs</a>
 <span class="spacer"></span>
 <button class="btn btn-primary" type="button" data-open="sample">Request a sample</button>
 <span class="tag">MENÚ DE ANCLAS + CTA FIJO (sticky)</span>
@@ -270,13 +312,18 @@ footer{background:var(--ink);color:#CFC6DD;font-size:13px;padding:28px 0}
 <h2>What is Affipore™? <span class="tag">H2 · respuesta directa (GEO)</span></h2>
 <p><b>Affipore™ is a natural active ingredient obtained from Barosma betulina that regulates sebocyte activity to reduce excess sebum on skin and scalp.</b> It helps formulators create mattifying skin care and anti-grease hair care with a visible, measurable result.</p>
 <p style="font-size:16px;color:var(--text)">[Segunda frase de contexto: para qué consumidor, qué tendencia resuelve y qué lo diferencia. 50 a 70 palabras en total.]</p>
+<p class="apps-lbl">Applications</p>
+<div class="apps">
+<a class="chip" href="#top">Oily skin</a><a class="chip" href="#top">Pore care</a><a class="chip" href="#top">Oily hair</a><a class="chip" href="#top">Scalp care</a>
+</div>
+<p style="margin:10px 0 0"><span class="tag">APLICACIONES · etiquetas/botones simples que enlazan al hub o a la categoría filtrada</span></p>
 </div>
 <aside class="glance" aria-label="At a glance">
 <p class="lbl">AT A GLANCE <span class="tag">CUADRO RESUMEN (UX-18)</span></p>
 <dl>
 <dt>INCI</dt><dd>[INCI name]</dd>
 <dt>Main ingredient</dt><dd>Barosma betulina</dd>
-<dt>Applications</dt><dd>Skin care · Hair &amp; scalp care</dd>
+<dt>Technology</dt><dd>[Be Tech technology]</dd>
 <dt>Main claims</dt><dd>Seboregulating · Oily hair</dd>
 <dt>Dosage</dt><dd>[X-X %]</dd>
 <dt>Natural origin</dt><dd>[X %] ISO 16128</dd>
@@ -288,35 +335,24 @@ footer{background:var(--ink);color:#CFC6DD;font-size:13px;padding:28px 0}
 </div>
 </section>
 
-<section style="padding-top:0">
+<section id="benefits" class="alt">
 <div class="wrap">
-<h2>See how Affipore™ reduces excess sebum on oily skin and scalp <span class="tag">H2 · VÍDEO con beneficio + keyword (UX-19) · solo si existe</span></h2>
-<button class="vid" type="button" aria-label="Play video (placeholder)">
-<span class="play"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#5B2C83"/></svg></span>
-<span class="cap">[Miniatura propia · el reproductor carga al hacer clic]</span>
-</button>
-<p class="transcript">How Affipore™ modulates sebocytes and what results formulators can expect. <a href="#top">Read the video transcript</a> <span class="tag">LEYENDA + TRANSCRIPCIÓN · VideoObject</span></p>
-</div>
-</section>
-
-<section class="alt">
-<div class="wrap">
-<h2>Key benefits of Affipore™ for oily skin and hair <span class="tag">H2 + H3 por beneficio</span></h2>
+<h2>How does Affipore™ help oily skin and hair? <span class="tag">H2 · BENEFICIOS + CÓMO FUNCIONA unificados</span></h2>
 <div class="grid">
-<article class="card"><div class="ico" style="background:#F2D6E4" aria-hidden="true"></div><h3>Reduces excess sebum</h3><p>Modulates sebocyte activity to bring sebum production back into balance.</p></article>
-<article class="card"><div class="ico" style="background:#E6DCF0" aria-hidden="true"></div><h3>Mattifies the skin</h3><p>Less shine and a more even-looking complexion through the day.</p></article>
-<article class="card"><div class="ico" style="background:#D4E3C6" aria-hidden="true"></div><h3>Keeps hair fresh for longer</h3><p>Oily roots look cleaner and hair keeps its volume between washes.</p></article>
+<article class="card"><div class="ico" style="background:#F2D6E4" aria-hidden="true"></div><h3>Reduces excess sebum</h3><p>Brings sebum production back into balance.</p><p class="how"><b>How:</b> modulates sebocyte activity. [Validar con I+D]</p></article>
+<article class="card"><div class="ico" style="background:#E6DCF0" aria-hidden="true"></div><h3>Mattifies the skin</h3><p>Less shine and a more even-looking complexion through the day.</p><p class="how"><b>How:</b> less sebum reaches the skin surface.</p></article>
+<article class="card"><div class="ico" style="background:#D4E3C6" aria-hidden="true"></div><h3>Keeps hair fresh for longer</h3><p>Oily roots look cleaner and hair keeps its volume between washes.</p><p class="how"><b>How:</b> [mecanismo, si se conoce].</p></article>
 </div>
-<p style="margin:14px 0 0"><span class="tag">TARJETAS · HOVER: se elevan y cambian de color</span></p>
+<p style="margin:14px 0 0"><span class="tag">H3 por beneficio · la línea "How" solo si hay mecanismo · infografía opcional</span></p>
 </div>
 </section>
 
 <section id="efficacy">
 <div class="wrap">
-<h2>Clinically proven efficacy <span class="tag">H2 · KPIs + before/after</span></h2>
+<h2>Clinically proven efficacy <span class="tag">H2 · KPIs + before/after · OPCIONAL</span></h2>
 <p class="study">In vivo study · [n] volunteers with oily skin · [n] days · placebo-controlled · [method]</p>
 <div class="grid">
-<div class="kpi"><p class="num" data-count="-0">[-X %]</p><p>sebum on the skin surface after [28] days</p></div>
+<div class="kpi"><p class="num">[-X %]</p><p>sebum on the skin surface after [28] days</p></div>
 <div class="kpi"><p class="num">[X %]</p><p>of volunteers saw less shine</p></div>
 <div class="kpi"><p class="num">[X] days</p><p>for a cleaner-looking scalp</p></div>
 </div>
@@ -339,51 +375,36 @@ footer{background:var(--ink);color:#CFC6DD;font-size:13px;padding:28px 0}
 </div>
 </section>
 
-<section id="mechanism" class="dark">
+<section id="science" class="dark">
 <div class="wrap">
-<h2>How does Affipore™ work? <span class="tag">H2 · pasos + infografía</span></h2>
-<ol class="steps grid">
-<li class="card"><p class="n">STEP 1</p><p class="t">Targets sebocytes</p><p class="sx">Affipore™ acts on the cells that produce sebum in the skin and scalp.</p></li>
-<li class="card"><p class="n">STEP 2</p><p class="t">Modulates sebum synthesis</p><p class="sx">[Mechanism detail from the efficacy dossier.]</p></li>
-<li class="card"><p class="n">STEP 3</p><p class="t">Reduces surface sebum</p><p class="sx">Less sebum reaches the surface of skin and hair.</p></li>
-<li class="card"><p class="n">STEP 4</p><p class="t">Visible result</p><p class="sx">Mattified skin and fresher-looking hair.</p></li>
-</ol>
+<h2>The science behind Affipore™ <span class="tag">H2 · CIENCIA DETRÁS (Be Tech) · sustituye a "The origin of"</span></h2>
+<div class="grid science">
+<article class="card"><p class="n">THE TECHNOLOGY</p><h3>[Be Tech technology name]</h3><p class="sx">[Qué tecnología Be Tech hay detrás, cómo funciona y por qué importa. Si no hay tecnología asociada: el concepto científico al que responde el activo.]</p><a class="lk" href="#top">Discover [technology] in Be Tech →</a></article>
+<article class="card"><p class="n">THE CONCEPT</p><h3>[Scientific concept]</h3><p class="sx">[Problema del consumidor o hallazgo científico al que responde. 80 a 120 palabras.]</p></article>
+<article class="card"><p class="n">THE ORIGIN</p><h3>Barosma betulina</h3><p class="sx">Barosma betulina (buchu) is a plant native to South Africa. [Parte usada, extracción y sourcing.]</p><a class="lk" href="#top">Discover the extract in Be Natural →</a></article>
+</div>
+<p style="margin:14px 0 0"><span class="tag">H3 por bloque · enlaza a Be Tech y Be Natural · "Origin" solo si aplica</span></p>
 </div>
 </section>
 
-<section id="origin">
-<div class="wrap">
-<h2>The origin of Affipore™: Barosma betulina <span class="tag">H2 + 2 H3 · storytelling</span></h2>
-<div class="grid origin" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px">
-<div><div class="imgph" style="background:#E9DDF2" role="img" aria-label="Concept image placeholder"></div><h3>The concept</h3><p>[Problema del consumidor y tendencia: piel y cabello grasos, búsqueda de soluciones naturales y suaves. 80 a 120 palabras.]</p></div>
-<div><div class="imgph" style="background:#D4E3C6" role="img" aria-label="Barosma betulina plant image placeholder"></div><h3>Origin and sustainable sourcing</h3><p>Barosma betulina (buchu) is a plant native to South Africa. [Parte usada, proceso de extracción y compromiso de sourcing. 80 a 120 palabras.] <a href="#top">Discover the extract in Be Natural</a></p></div>
+<section id="formulation" class="alt">
+<div class="wrap formulation">
+<div class="f-text">
+<h2>Affipore™ launch formulation: [Formula name] <span class="tag">H2 · FORMULACIÓN DE LANZAMIENTO · OPCIONAL</span></h2>
+<p>[Descripción breve de la fórmula: formato, textura, para qué consumidor y qué demuestra del activo.]</p>
+<dl class="f-data">
+<div><dt>Natural origin</dt><dd>[X %]</dd></div>
+<div><dt>Affipore™</dt><dd>[X %]</dd></div>
+<div><dt>Format</dt><dd>[Fluid / gel / shampoo]</dd></div>
+</dl>
+<p style="margin:0"><span class="tag">DATOS de la ficha de formulación (% naturalidad destacado)</span></p>
+<div class="ctas" style="margin-top:18px">
+<button class="btn btn-primary" type="button" data-open="sample">Request this formulation</button>
+<a class="btn btn-ghost" href="#top">Watch the formulation video</a>
 </div>
+<p style="margin:10px 0 0"><span class="tag">VÍDEO DE FORMULACIÓN → YouTube (si existe)</span></p>
 </div>
-</section>
-
-<section id="applications" class="alt">
-<div class="wrap">
-<h2>Applications and formulation ideas <span class="tag">H2 · PESTAÑAS (todo en el HTML)</span></h2>
-<div class="tabs" role="tablist" aria-label="Application area">
-<button type="button" role="tab" id="tab-skin" aria-controls="panel-skin" aria-selected="true">Skin care</button>
-<button type="button" role="tab" id="tab-hair" aria-controls="panel-hair" aria-selected="false">Hair and scalp care</button>
-</div>
-<div class="panel" id="panel-skin" role="tabpanel" aria-labelledby="tab-skin">
-<h3>Skin care</h3>
-<div class="grid">
-<article class="card"><p class="proto">PROTOTYPE FORMULA</p><p class="fname">Mattifying face fluid</p><p>Light daily fluid for oily and combination skin with a dry-touch finish.</p></article>
-<article class="card"><p class="proto">PROTOTYPE FORMULA</p><p class="fname">Pore-refining toner</p><p>Water-based toner that reduces shine between cleansing steps.</p></article>
-<article class="card"><p class="proto">PROTOTYPE FORMULA</p><p class="fname">Oil-control moisturizer</p><p>Gel-cream that hydrates without adding greasiness.</p></article>
-</div>
-</div>
-<div class="panel" id="panel-hair" role="tabpanel" aria-labelledby="tab-hair" hidden>
-<h3>Hair and scalp care</h3>
-<div class="grid">
-<article class="card"><p class="proto">PROTOTYPE FORMULA</p><p class="fname">Purifying shampoo</p><p>Daily shampoo for oily roots that keeps hair fresh for longer.</p></article>
-<article class="card"><p class="proto">PROTOTYPE FORMULA</p><p class="fname">Scalp balancing serum</p><p>Leave-on serum applied directly to the scalp.</p></article>
-<article class="card"><p class="proto">PROTOTYPE FORMULA</p><p class="fname">Dry shampoo spray</p><p>Refreshes hair between washes and absorbs excess sebum.</p></article>
-</div>
-</div>
+<div class="f-img" role="img" aria-label="Launch formulation image placeholder"><span>[Imagen de la fórmula]</span></div>
 </div>
 </section>
 
@@ -418,7 +439,7 @@ footer{background:var(--ink);color:#CFC6DD;font-size:13px;padding:28px 0}
 <div class="faq-item"><h3><button type="button" aria-expanded="false">In which formulations can Affipore™ be used?<span class="pm" aria-hidden="true">+</span></button></h3><p class="ans" hidden>Face fluids, mattifying creams, toners, shampoos and scalp serums designed for oily skin and oily hair.</p></div>
 <div class="faq-item"><h3><button type="button" aria-expanded="false">Is Affipore™ preservative-free?<span class="pm" aria-hidden="true">+</span></button></h3><p class="ans" hidden>Yes, Affipore™ is preservative-free. [Add other certifications once validated.]</p></div>
 <div class="faq-item"><h3><button type="button" aria-expanded="false">What is the difference between Affipore™ and Nelupure™?<span class="pm" aria-hidden="true">+</span></button></h3><p class="ans" hidden>Both target oily skin. [Explain the difference in mechanism and use, then link to the Nelupure™ page. To be validated by R&amp;D.]</p></div>
-<div class="faq-item"><h3><button type="button" aria-expanded="false">How can I request a sample of Affipore™?<span class="pm" aria-hidden="true">+</span></button></h3><p class="ans" hidden>Click Request a sample, fill in five fields and our team will contact you within [48 h].</p></div>
+<div class="faq-item"><h3><button type="button" aria-expanded="false">How can I request a sample of Affipore™?<span class="pm" aria-hidden="true">+</span></button></h3><p class="ans" hidden>Click Request a sample and fill in the contact form. One of our experts will get in touch to prepare your sample.</p></div>
 <p style="margin:14px 0 0"><span class="tag">H3 por pregunta · respuestas en el HTML aunque estén plegadas</span></p>
 </div>
 </section>
@@ -430,8 +451,8 @@ footer{background:var(--ink);color:#CFC6DD;font-size:13px;padding:28px 0}
 <p>Our technical team can help you choose the right active and dosage.</p>
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:12px">
-<button class="btn btn-w" type="button" data-open="sample">Request a sample</button>
-<a class="btn btn-o" href="#top">Talk to an expert</a>
+<button class="btn btn-w" type="button" data-open="sample">Talk to an expert</button>
+<a class="btn btn-o" href="#documents">Technical documents</a>
 </div>
 </div>
 </section>
@@ -455,9 +476,10 @@ footer{background:var(--ink);color:#CFC6DD;font-size:13px;padding:28px 0}
 
 <div class="overlay" id="ov-sample" aria-hidden="true">
 <div class="modal" role="dialog" aria-modal="true" aria-labelledby="m1">
-<div class="modal-head"><p class="t" id="m1">Request a sample</p><button class="x" type="button" data-close aria-label="Close">×</button></div>
-<p style="margin:0 0 18px;font-size:14px;color:var(--muted)">Product: <b>Affipore™ (71700)</b> <span class="tag">POP-UP · activo precargado · máx. 5 campos</span></p>
+<div class="modal-head"><p class="t" id="m1">Talk to an expert</p><button class="x" type="button" data-close aria-label="Close">×</button></div>
+<p style="margin:0 0 18px;font-size:14px;color:var(--muted)">Our experts will contact you to prepare your <b>Affipore™ (71700)</b> sample. <span class="tag">FORMULARIO HUBSPOT · activo en campo oculto · flujo de muestra</span></p>
 <form onsubmit="event.preventDefault();this.closest('.overlay').classList.remove('open');">
+<input type="hidden" name="product" value="Affipore 71700">
 <label>Name<input type="text" autocomplete="name"></label>
 <label>Company<input type="text" autocomplete="organization"></label>
 <label>Work email<input type="email" autocomplete="email"></label>
